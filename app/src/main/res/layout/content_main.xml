@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.desertordering.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Droid Food!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/donut"
+        android:layout_width="108dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="56dp"
+        android:onClick="showDonutOrder"
+        android:contentDescription="@string/donut_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/donut_circle" />
+
+    <ImageView
+        android:id="@+id/froyo"
+        android:layout_width="110dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="52dp"
+        android:contentDescription="@string/froyo_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="showFroyoOrder"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/donut"
+        app:srcCompat="@drawable/froyo_circle" />
+
+    <ImageView
+        android:id="@+id/ice_cream"
+        android:layout_width="107dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="72dp"
+        android:onClick="showIceCreamOrder"
+        android:contentDescription="@string/ice_cream_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/froyo"
+        app:srcCompat="@drawable/icecream_circle" />
+
+    <TextView
+        android:id="@+id/donut_description"
+        android:layout_width="127dp"
+        android:layout_height="75dp"
+        android:text="@string/donut_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="showDonutOrder"
+        app:layout_constraintStart_toEndOf="@+id/donut"
+        app:layout_constraintTop_toTopOf="@+id/donut" />
+
+    <TextView
+        android:id="@+id/ice_cream_description"
+        android:layout_width="128dp"
+        android:layout_height="74dp"
+        android:text="@string/ice_cream_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ice_cream"
+        app:layout_constraintTop_toTopOf="@+id/ice_cream" />
+
+    <TextView
+        android:id="@+id/froyo_description"
+        android:layout_width="124dp"
+        android:layout_height="67dp"
+        android:text="@string/froyo_desc"
+        app:layout_constraintBottom_toTopOf="@+id/ice_cream_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/froyo"
+        app:layout_constraintTop_toBottomOf="@+id/donut_description"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:layout_gravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_shopping_cart"
+        android:focusable="true" />
+
+</android.support.constraint.ConstraintLayout>
